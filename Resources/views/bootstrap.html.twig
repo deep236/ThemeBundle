@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    {% block meta %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+    {% stylesheets
+    '@DaluThemeBundle/vendor/twitter/bootstrap/less/bootstrap.less' filter="less"
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}">
+    {% endstylesheets %}
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+{% block body %}{% endblock %}
+{% javascripts
+'http://code.jquery.com/jquery.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-transition.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-alert.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-button.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-carousel.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-collapse.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-dropdown.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-modal.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-tooltip.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-popover.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-scrollspy.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-tab.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-typeahead.js' filter="?closure"
+'@DaluThemeBundle/vendor/twitter/bootstrap/js/bootstrap-affix.js' filter="?closure"
+%}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

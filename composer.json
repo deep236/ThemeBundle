@@ -1,0 +1,42 @@
+{
+    "name": "dalu/themebundle",
+    "description": "Collection of Themes to use with Symfony2",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Darko Luketic",
+            "email": "info@icod.de"
+        }
+    ],
+    "require": {
+        "twitter/bootstrap": "v2.3.1",
+        "99lime/html-kickstart": "dev-master",
+        "zurb/foundation": "dev-master",
+        "djesse/yaml": "4.0.2"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "zurb/foundation",
+                "version": "dev-master",
+                "dist": {
+                    "url": "https://github.com/zurb/foundation/archive/master.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "djesse/yaml",
+                "version": "4.0.2",
+                "dist": {
+                    "url": "http://www.yaml.de/download/release_402/yaml402-121023.zip",
+                    "type": "zip"
+                }
+            }
+        }
+
+    ]
+}

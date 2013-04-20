@@ -1,0 +1,47 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    {% block meta %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+    {% stylesheets
+    '@DaluThemeBundle/vendor/zurb/foundation/scss/normalize.scss' filter='scss'
+    '@DaluThemeBundle/vendor/zurb/foundation/scss/foundation.scss' filter='scss'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}">
+    {% endstylesheets %}
+    {% block stylesheets %}{% endblock %}
+    {% javascripts
+    '@DaluThemeBundle/vendor/zurb/foundation/js/vendor/custom.modernizr.js' filter="?closure"
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+</head>
+<body>
+{% block body %}{% endblock %}
+{% javascripts
+'@DaluThemeBundle/vendor/zurb/foundation/js/vendor/jquery.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.alerts.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.clearing.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.cookie.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.dropdown.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.forms.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.joyride.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.magellan.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.orbit.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.placeholder.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.reveal.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.section.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.tooltips.js' filter="?closure"
+'@DaluThemeBundle/vendor/zurb/foundation/js/foundation/foundation.topbar.js' filter="?closure"
+%}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+<script>
+    $(document).foundation();
+</script>
+{% block javascripts %}{% endblock %}
+</body>
+</html>
