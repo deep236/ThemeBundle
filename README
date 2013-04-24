@@ -1,5 +1,18 @@
 Symfony2 Collection of Base CSS Frameworks
 
+Versions:
+
+Twitter Bootstrap 2.3.1
+Zurb Foundation dev-master
+99lime HTML Kickstart dev-master
+DJesse YAML 4.0.2
+
+Base Layouts Complete:
+
+Twitter Bootstrap
+Zurb Foundation
+
+
 # Assetic Configuration
 assetic:
     debug:          %kernel.debug%
