@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "twitter/bootstrap": "v2.3.1",
+        "twitter/bootstrap": "v2.3.2",
         "99lime/html-kickstart": "dev-master",
         "zurb/foundation": "dev-master",
         "djesse/yaml": "4.0.2"
